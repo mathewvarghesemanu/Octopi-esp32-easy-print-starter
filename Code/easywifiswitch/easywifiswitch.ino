@@ -1,4 +1,4 @@
-#include <ArduinoJson.h>
+e#include <ArduinoJson.h>
 #include <HTTPClient.h>
 #include <WiFiMulti.h>
 
@@ -25,7 +25,8 @@ void loop() {
     Serial.print("on\n");
     digitalWrite(LED_BUILTIN, 1);
     postDataToServer();
-    delay(10000);
+    digitalWrite(LED_BUILTIN, 0);
+    delay(500);
   }
   else
   {
@@ -66,5 +67,5 @@ void postDataToServer() {
     }
 
   }
-  WiFi.disconnect();
+  
 }
